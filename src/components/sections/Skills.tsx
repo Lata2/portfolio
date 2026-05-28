@@ -12,7 +12,7 @@ const tabs: { key: Tab; label: string }[] = [
 function SkillBar({ name, level, animate }: { name: string; level: number; animate: boolean }) {
   return (
     <div className="mb-6">
-      <div className="flex justify-between items-center mb-2">
+      <div className="flex items-center justify-between mb-2">
         <span className="text-sm font-medium" style={{ color: "var(--text-primary)" }}>
           {name}
         </span>
@@ -48,7 +48,7 @@ export default function Skills() {
     <section
       id="skills"
       ref={ref}
-      className="py-28 px-6 relative"
+      className="relative px-6 py-28"
       style={{ background: "var(--bg-deep)" }}
     >
       <div className="max-w-6xl mx-auto">
@@ -56,20 +56,20 @@ export default function Skills() {
         <div className={`mb-16 opacity-0 ${visible ? "animate-fade-up" : ""}`}>
           <span className="section-label">02 — Expertise</span>
           <h2
-            className="font-display text-4xl md:text-5xl font-light mt-3"
+            className="mt-3 text-4xl font-light font-display md:text-5xl"
             style={{ color: "var(--text-primary)" }}
           >
             Skills &{" "}
-            <span className="text-gold-gradient font-semibold">Technologies</span>
+            <span className="text-gold-gradient font-gwen">Technologies</span>
           </h2>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-16 items-start">
+        <div className="grid items-start gap-16 lg:grid-cols-2">
           {/* Left — Tabs + Bars */}
           <div className={`opacity-0 delay-200 ${visible ? "animate-fade-up" : ""}`}>
             {/* Tab switcher */}
             <div
-              className="flex gap-1 mb-10 p-1 rounded-xl"
+              className="flex gap-1 p-1 mb-10 rounded-xl"
               style={{ background: "var(--bg-card)", border: "1px solid var(--border-subtle)" }}
             >
               {tabs.map(({ key, label }) => (
@@ -103,9 +103,9 @@ export default function Skills() {
 
           {/* Right — Proficiency visual */}
           <div className={`opacity-0 delay-400 ${visible ? "animate-fade-up" : ""}`}>
-            <div className="glass-card p-8">
+            <div className="p-8 glass-card">
               <h3
-                className="font-display text-2xl font-semibold mb-8"
+                className="mb-8 text-2xl font-display font-gwen"
                 style={{ color: "var(--text-primary)" }}
               >
                 Proficiency Overview
@@ -120,7 +120,7 @@ export default function Skills() {
                   { label: "UI/UX Design", pct: 72, desc: "Figma, Framer, Tailwind" },
                 ].map(({ label, pct, desc }) => (
                   <div key={label}>
-                    <div className="flex justify-between items-start mb-2">
+                    <div className="flex items-start justify-between mb-2">
                       <div>
                         <p className="text-sm font-medium" style={{ color: "var(--text-primary)" }}>
                           {label}
@@ -130,18 +130,18 @@ export default function Skills() {
                         </p>
                       </div>
                       <span
-                        className="font-mono text-sm font-semibold"
+                        className="font-mono text-sm font-gwen"
                         style={{ color: "var(--gold-400)" }}
                       >
                         {pct}%
                       </span>
                     </div>
                     <div
-                      className="h-1 rounded-full overflow-hidden"
+                      className="h-1 overflow-hidden rounded-full"
                       style={{ background: "rgba(255,255,255,0.06)" }}
                     >
                       <div
-                        className="h-full rounded-full transition-all duration-1000"
+                        className="h-full transition-all duration-1000 rounded-full"
                         style={{
                           width: visible ? `${pct}%` : "0%",
                           background: "linear-gradient(90deg, var(--gold-500), var(--gold-300))",
@@ -155,15 +155,15 @@ export default function Skills() {
 
               {/* Additional info */}
               <div
-                className="mt-8 pt-6 border-t"
+                className="pt-6 mt-8 border-t"
                 style={{ borderColor: "var(--border-subtle)" }}
               >
-                <p className="section-label mb-4">Also familiar with</p>
+                <p className="mb-4 section-label">Also familiar with</p>
                 <div className="flex flex-wrap gap-2">
                   {["Redis", "Kubernetes", "CI/CD", "WebSockets", "OAuth2", "TDD"].map((t) => (
                     <span
                       key={t}
-                      className="px-3 py-1 rounded-full text-xs font-mono"
+                      className="px-3 py-1 font-mono text-xs rounded-full"
                       style={{
                         background: "rgba(255,255,255,0.04)",
                         border: "1px solid var(--border-subtle)",

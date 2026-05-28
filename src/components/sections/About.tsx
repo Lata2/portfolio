@@ -35,7 +35,7 @@ export default function About() {
   ];
 
   return (
-    <section id="about" ref={ref} className="py-28 px-6 relative overflow-hidden">
+    <section id="about" ref={ref} className="relative px-6 overflow-hidden py-28">
       {/* Background */}
       <div
         className="orb"
@@ -47,36 +47,36 @@ export default function About() {
         }}
       />
 
-      <div className="max-w-6xl mx-auto relative">
+      <div className="relative max-w-6xl mx-auto">
         {/* Section header */}
         <div className={`mb-16 opacity-0 ${visible ? "animate-fade-up" : ""}`}>
           <span className="section-label">01 — About Me</span>
           <h2
-            className="font-display text-4xl md:text-5xl font-light mt-3"
+            className="mt-3 text-4xl font-light font-display md:text-5xl"
             style={{ color: "var(--text-primary)" }}
           >
             The Story{" "}
-            <span className="text-gold-gradient font-semibold">Behind the Code</span>
+            <span className="text-gold-gradient font-gwen">Behind the Code</span>
           </h2>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-16 items-start">
+        <div className="grid items-start gap-16 lg:grid-cols-2">
           {/* Left — text */}
           <div className={`opacity-0 delay-200 ${visible ? "animate-fade-up" : ""}`}>
             <p
-              className="text-base leading-relaxed mb-6"
+              className="mb-6 text-base leading-relaxed"
               style={{ color: "var(--text-secondary)" }}
             >
               I'm a dedicated full-stack web developer based in{" "}
               <span style={{ color: "var(--gold-300)" }}>
                 <MapPin size={14} className="inline mr-1" />
-                Indore, India
+             Raipur Chhattisgarh, India
               </span>
               . With expertise in both frontend and backend technologies, I build seamless digital
               experiences from concept to deployment.
             </p>
             <p
-              className="text-base leading-relaxed mb-8"
+              className="mb-8 text-base leading-relaxed"
               style={{ color: "var(--text-secondary)" }}
             >
               I thrive in collaborative environments and am always eager to learn new technologies
@@ -85,7 +85,7 @@ export default function About() {
             </p>
 
             {/* Traits */}
-            <div className="space-y-3 mb-8">
+            <div className="mb-8 space-y-3">
               {[
                 "Problem-solver who loves algorithmic challenges",
                 "Strong advocate for clean, documented code",
@@ -104,7 +104,7 @@ export default function About() {
               ))}
             </div>
 
-            <a href={personalInfo.resume} className="btn-ghost inline-flex">
+            <a href={personalInfo.resume} className="inline-flex btn-ghost">
               Download Resume
             </a>
           </div>
@@ -114,7 +114,7 @@ export default function About() {
             {cards.map(({ icon: Icon, title, desc }) => (
               <div
                 key={title}
-                className="glass-card p-6 flex gap-5 group transition-all duration-300"
+                className="flex gap-5 p-6 transition-all duration-300 glass-card group"
                 style={{ cursor: "default" }}
                 onMouseEnter={(e) => {
                   (e.currentTarget as HTMLDivElement).style.borderColor = "rgba(200,169,110,0.5)";
@@ -126,7 +126,7 @@ export default function About() {
                 }}
               >
                 <div
-                  className="w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0"
+                  className="flex items-center justify-center flex-shrink-0 w-12 h-12 rounded-xl"
                   style={{
                     background: "var(--gold-glow)",
                     border: "1px solid var(--border-gold)",
@@ -137,7 +137,7 @@ export default function About() {
                 </div>
                 <div>
                   <h3
-                    className="font-semibold mb-1"
+                    className="font-gwenmb-1 "
                     style={{ color: "var(--text-primary)" }}
                   >
                     {title}
@@ -155,13 +155,13 @@ export default function About() {
         <div
           className={`mt-20 overflow-hidden opacity-0 delay-600 ${visible ? "animate-fade-up" : ""}`}
         >
-          <p className="section-label mb-6 text-center">Technologies I work with</p>
+          <p className="mb-6 text-center section-label">Technologies I work with</p>
           <div className="relative overflow-hidden" style={{ maskImage: "linear-gradient(90deg, transparent, black 10%, black 90%, transparent)" }}>
             <div className="flex animate-marquee whitespace-nowrap">
               {[...techMarquee, ...techMarquee].map((tech, i) => (
                 <span
                   key={i}
-                  className="mx-6 px-4 py-2 rounded-full text-sm font-mono inline-block"
+                  className="inline-block px-4 py-2 mx-6 font-mono text-sm rounded-full"
                   style={{
                     color: "var(--gold-300)",
                     border: "1px solid var(--border-gold)",

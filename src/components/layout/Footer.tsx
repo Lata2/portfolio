@@ -10,8 +10,8 @@ export default function Footer() {
         <div className="grid gap-12 mb-12 md:grid-cols-3">
           {/* Brand */}
           <div>
-            <span className="text-2xl font-semibold font-display text-gold-gradient">
-              Hemlata Dewangan
+            <span className="text-2xl font-gwen font-display text-gold-gradient">
+              Lata Dewangan
             </span>
             <p className="mt-3 text-sm leading-relaxed" style={{ color: "var(--text-muted)" }}>
               Full Stack Web Developer crafting elegant, scalable digital experiences from Indore, India.
@@ -78,7 +78,7 @@ export default function Footer() {
 
         <div className="flex flex-col items-center justify-between gap-4 md:flex-row">
           <p className="text-xs" style={{ color: "var(--text-muted)" }}>
-            © {year} Hemlata Dewangan. All rights reserved.
+            © {year} Lata Dewangan. All rights reserved.
           </p>
           <p className="text-xs" style={{ color: "var(--text-muted)" }}>
             Built with Next.js · TypeScript · Tailwind CSS

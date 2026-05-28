@@ -60,7 +60,7 @@ export default function Contact() {
   ];
 
   return (
-    <section id="contact" ref={ref} className="py-28 px-6 relative overflow-hidden">
+    <section id="contact" ref={ref} className="relative px-6 overflow-hidden py-28">
       {/* Background */}
       <div
         className="orb"
@@ -72,29 +72,29 @@ export default function Contact() {
         }}
       />
 
-      <div className="max-w-6xl mx-auto relative">
+      <div className="relative max-w-6xl mx-auto">
         {/* Header */}
         <div className={`mb-16 opacity-0 ${visible ? "animate-fade-up" : ""}`}>
           <span className="section-label">05 — Contact</span>
-          <h2 className="font-display text-4xl md:text-5xl font-light mt-3" style={{ color: "var(--text-primary)" }}>
+          <h2 className="mt-3 text-4xl font-light font-display md:text-5xl" style={{ color: "var(--text-primary)" }}>
             Let's{" "}
-            <span className="text-gold-gradient font-semibold">Work Together</span>
+            <span className="text-gold-gradient font-gwen">Work Together</span>
           </h2>
-          <p className="mt-4 max-w-xl text-base" style={{ color: "var(--text-secondary)" }}>
+          <p className="max-w-xl mt-4 text-base" style={{ color: "var(--text-secondary)" }}>
             Have a project in mind or want to discuss opportunities? I'd love to hear from you.
             Send me a message and I'll get back to you within 24–48 hours.
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-5 gap-12">
+        <div className="grid gap-12 lg:grid-cols-5">
           {/* Left — info */}
           <div className={`lg:col-span-2 opacity-0 delay-200 ${visible ? "animate-fade-up" : ""}`}>
-            <div className="space-y-4 mb-10">
+            <div className="mb-10 space-y-4">
               {info.map(({ icon: Icon, label, value, href }) => (
                 <a
                   key={label}
                   href={href}
-                  className="flex items-start gap-4 p-4 rounded-xl group transition-all duration-300"
+                  className="flex items-start gap-4 p-4 transition-all duration-300 rounded-xl group"
                   style={{ border: "1px solid var(--border-subtle)", background: "var(--bg-card)" }}
                   onMouseEnter={(e) => {
                     e.currentTarget.style.borderColor = "var(--border-gold)";
@@ -106,7 +106,7 @@ export default function Contact() {
                   }}
                 >
                   <div
-                    className="w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0"
+                    className="flex items-center justify-center flex-shrink-0 w-10 h-10 rounded-lg"
                     style={{
                       background: "var(--gold-glow)",
                       border: "1px solid var(--border-gold)",
@@ -125,14 +125,14 @@ export default function Contact() {
 
             {/* Availability card */}
             <div
-              className="glass-card p-6"
+              className="p-6 glass-card"
             >
               <div className="flex items-center gap-3 mb-3">
                 <span
                   className="w-2.5 h-2.5 rounded-full animate-pulse-gold"
                   style={{ background: "#4ade80" }}
                 />
-                <span className="text-sm font-semibold" style={{ color: "#4ade80" }}>
+                <span className="text-sm font-gwen" style={{ color: "#4ade80" }}>
                   Currently Available
                 </span>
               </div>
@@ -145,16 +145,16 @@ export default function Contact() {
 
           {/* Right — form */}
           <div className={`lg:col-span-3 opacity-0 delay-400 ${visible ? "animate-fade-up" : ""}`}>
-            <div className="glass-card p-8">
+            <div className="p-8 glass-card">
               {status === "success" ? (
-                <div className="text-center py-12">
+                <div className="py-12 text-center">
                   <div
-                    className="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4"
+                    className="flex items-center justify-center w-16 h-16 mx-auto mb-4 rounded-full"
                     style={{ background: "rgba(74,222,128,0.1)", border: "1px solid rgba(74,222,128,0.3)" }}
                   >
                     <CheckCircle size={32} style={{ color: "#4ade80" }} />
                   </div>
-                  <h3 className="font-display text-2xl font-semibold mb-2" style={{ color: "var(--text-primary)" }}>
+                  <h3 className="mb-2 text-2xl font-display font-gwen" style={{ color: "var(--text-primary)" }}>
                     Message Sent!
                   </h3>
                   <p className="text-sm" style={{ color: "var(--text-secondary)" }}>
@@ -164,9 +164,9 @@ export default function Contact() {
                 </div>
               ) : (
                 <form onSubmit={handleSubmit} className="space-y-5">
-                  <div className="grid sm:grid-cols-2 gap-5">
+                  <div className="grid gap-5 sm:grid-cols-2">
                     <div>
-                      <label className="section-label block mb-2">Name</label>
+                      <label className="block mb-2 section-label">Name</label>
                       <input
                         name="name"
                         value={form.name}
@@ -177,7 +177,7 @@ export default function Contact() {
                       />
                     </div>
                     <div>
-                      <label className="section-label block mb-2">Email</label>
+                      <label className="block mb-2 section-label">Email</label>
                       <input
                         name="email"
                         type="email"
@@ -191,7 +191,7 @@ export default function Contact() {
                   </div>
 
                   <div>
-                    <label className="section-label block mb-2">Subject</label>
+                    <label className="block mb-2 section-label">Subject</label>
                     <input
                       name="subject"
                       value={form.subject}
@@ -203,7 +203,7 @@ export default function Contact() {
                   </div>
 
                   <div>
-                    <label className="section-label block mb-2">Message</label>
+                    <label className="block mb-2 section-label">Message</label>
                     <textarea
                       name="message"
                       value={form.message}
@@ -211,7 +211,7 @@ export default function Contact() {
                       required
                       rows={6}
                       placeholder="Tell me about your project or opportunity..."
-                      className="field-input resize-none"
+                      className="resize-none field-input"
                     />
                   </div>
 
@@ -228,7 +228,7 @@ export default function Contact() {
                   <button
                     type="submit"
                     disabled={status === "loading"}
-                    className="btn-gold w-full justify-center"
+                    className="justify-center w-full btn-gold"
                     style={{ opacity: status === "loading" ? 0.7 : 1, cursor: status === "loading" ? "not-allowed" : "pointer" }}
                   >
                     {status === "loading" ? (

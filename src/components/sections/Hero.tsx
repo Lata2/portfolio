@@ -50,7 +50,7 @@ export default function Hero() {
     <section
       id="home"
       ref={ref}
-      className="relative min-h-screen flex flex-col justify-center px-6 pt-24 pb-16 overflow-hidden"
+      className="relative flex flex-col justify-center min-h-screen px-6 pt-24 pb-16 overflow-hidden"
     >
       {/* Background orbs */}
       <div
@@ -82,8 +82,8 @@ export default function Hero() {
         }}
       />
 
-      <div className="relative max-w-6xl mx-auto w-full">
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
+      <div className="relative w-full max-w-6xl mx-auto">
+        <div className="grid items-center gap-16 lg:grid-cols-2">
           {/* Left column */}
           <div>
             {/* Label */}
@@ -104,7 +104,7 @@ export default function Hero() {
             >
               <span style={{ color: "var(--text-secondary)" }}>Hello, I'm</span>
               <br />
-              <span className="text-gold-gradient font-semibold">
+              <span className="font-gwen text-gold-gradient">
                 {personalInfo.firstName}
               </span>
               <br />
@@ -115,7 +115,7 @@ export default function Hero() {
             <div
               className={`flex items-center gap-3 mb-8 opacity-0 delay-200 ${visible ? "animate-fade-up" : ""}`}
             >
-              <div className="gold-divider w-8" />
+              <div className="w-8 gold-divider" />
               <p className="font-mono text-sm" style={{ color: "var(--text-secondary)" }}>
                 {role}
                 <span
@@ -160,7 +160,7 @@ export default function Hero() {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label={label}
-                  className="w-11 h-11 rounded-xl flex items-center justify-center transition-all duration-300"
+                  className="flex items-center justify-center transition-all duration-300 w-11 h-11 rounded-xl"
                   style={{
                     border: "1px solid var(--border-gold)",
                     color: "var(--text-muted)",
@@ -203,7 +203,7 @@ export default function Hero() {
 
               {/* Avatar ring */}
               <div
-                className="w-72 h-72 md:w-80 md:h-80 rounded-full flex items-center justify-center"
+                className="flex items-center justify-center rounded-full w-72 h-72 md:w-80 md:h-80"
                 style={{
                   background: "linear-gradient(135deg, var(--bg-card) 0%, var(--bg-surface) 100%)",
                   border: "1px solid var(--border-gold)",
@@ -212,21 +212,21 @@ export default function Hero() {
                 <div className="text-center">
                   {/* Initials */}
                   <div
-                    className="w-28 h-28 rounded-full mx-auto mb-4 flex items-center justify-center font-display text-5xl font-bold"
+                    className="flex items-center justify-center mx-auto mb-4 text-5xl font-bold rounded-full w-28 h-28 font-display"
                     style={{
                       background: "linear-gradient(135deg, var(--gold-400), var(--gold-600))",
                       color: "var(--bg-void)",
                     }}
                   >
-                    HD
+                    
                   </div>
                   <p
-                    className="font-display text-xl font-semibold mb-1"
+                    className="mb-1 text-xl font-gwen font-display"
                     style={{ color: "var(--text-primary)" }}
                   >
                     {personalInfo.name}
                   </p>
-                  <p className="section-label text-xs">{personalInfo.title}</p>
+                  <p className="text-xs section-label">{personalInfo.title}</p>
                   <div className="flex items-center justify-center gap-2 mt-3">
                     <span
                       className="w-2 h-2 rounded-full"
@@ -275,11 +275,11 @@ export default function Hero() {
           {stats.map(({ value, label }) => (
             <div key={label} className="text-center">
               <p
-                className="font-display text-3xl font-semibold text-gold-gradient"
+                className="text-3xl font-gwen font-display text-gold-gradient"
               >
                 {value}
               </p>
-              <p className="text-xs mt-1" style={{ color: "var(--text-muted)" }}>
+              <p className="mt-1 text-xs" style={{ color: "var(--text-muted)" }}>
                 {label}
               </p>
             </div>
@@ -290,7 +290,7 @@ export default function Hero() {
       {/* Scroll indicator */}
       <a
         href="#about"
-        className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 transition-opacity duration-300 hover:opacity-60"
+        className="absolute flex flex-col items-center gap-2 transition-opacity duration-300 -translate-x-1/2 bottom-10 left-1/2 hover:opacity-60"
         style={{ color: "var(--text-muted)" }}
       >
         <span className="font-mono text-xs">Scroll</span>

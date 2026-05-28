@@ -2,11 +2,11 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Hemlata Dewangan | Full Stack Developer",
+  title: "Lata Dewangan | Full Stack Developer",
   description:
     "Full Stack Web Developer specializing in React, Next.js, Node.js and scalable digital experiences. Based in Indore, India.",
   openGraph: {
-    title: "Hemlata Dewangan | Full Stack Developer",
+    title: "Lata Dewangan | Full Stack Developer",
     description: "Crafting digital experiences with precision and elegance.",
     type: "website",
   },

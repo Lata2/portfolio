@@ -23,20 +23,20 @@ export default function Experience() {
     <section
       id="experience"
       ref={ref}
-      className="py-28 px-6 relative"
+      className="relative px-6 py-28"
       style={{ background: "var(--bg-deep)" }}
     >
       <div className="max-w-6xl mx-auto">
         {/* Header */}
         <div className={`mb-16 opacity-0 ${visible ? "animate-fade-up" : ""}`}>
           <span className="section-label">04 — Career</span>
-          <h2 className="font-display text-4xl md:text-5xl font-light mt-3" style={{ color: "var(--text-primary)" }}>
+          <h2 className="mt-3 text-4xl font-light font-display md:text-5xl" style={{ color: "var(--text-primary)" }}>
             Work{" "}
-            <span className="text-gold-gradient font-semibold">Experience</span>
+            <span className="text-gold-gradient font-gwen">Experience</span>
           </h2>
         </div>
 
-        <div className="grid lg:grid-cols-5 gap-8">
+        <div className="grid gap-8 lg:grid-cols-5">
           {/* Left — company list */}
           <div
             className={`lg:col-span-2 space-y-2 opacity-0 delay-200 ${visible ? "animate-fade-up" : ""}`}
@@ -45,7 +45,7 @@ export default function Experience() {
               <button
                 key={e.id}
                 onClick={() => setSelected(i)}
-                className="w-full text-left p-5 rounded-xl transition-all duration-300 group"
+                className="w-full p-5 text-left transition-all duration-300 rounded-xl group"
                 style={{
                   background: selected === i ? "var(--bg-card)" : "transparent",
                   border: selected === i ? "1px solid var(--border-gold)" : "1px solid transparent",
@@ -76,7 +76,7 @@ export default function Experience() {
                   </div>
                   <div>
                     <p
-                      className="text-sm font-semibold"
+                      className="text-sm font-gwen"
                       style={{ color: selected === i ? "var(--text-primary)" : "var(--text-secondary)" }}
                     >
                       {e.company}
@@ -108,13 +108,13 @@ export default function Experience() {
           >
             <div className="mb-6">
               <h3
-                className="font-display text-2xl font-semibold mb-1"
+                className="mb-1 text-2xl font-display font-gwen"
                 style={{ color: "var(--text-primary)" }}
               >
                 {exp.role}
               </h3>
               <p
-                className="text-gold-gradient font-semibold text-lg"
+                className="text-lg text-gold-gradient font-gwen"
               >
                 {exp.company}
               </p>
@@ -131,14 +131,14 @@ export default function Experience() {
               </div>
             </div>
 
-            <div className="gold-divider mb-6" />
+            <div className="mb-6 gold-divider" />
 
-            <p className="text-sm leading-relaxed mb-6" style={{ color: "var(--text-secondary)" }}>
+            <p className="mb-6 text-sm leading-relaxed" style={{ color: "var(--text-secondary)" }}>
               {exp.description}
             </p>
 
             <div>
-              <p className="section-label mb-4">Key Highlights</p>
+              <p className="mb-4 section-label">Key Highlights</p>
               <ul className="space-y-3">
                 {exp.highlights.map((h, i) => (
                   <li key={i} className="flex items-start gap-3">

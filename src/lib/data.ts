@@ -1,15 +1,15 @@
 export const personalInfo = {
-  name: "Hemlata Dewangan",
-  firstName: "Hemlata",
+  name: "Lata Dewangan",
+  firstName: "Lata",
   lastName: "Dewangan",
   title: "Full Stack Web Developer",
   tagline: "Crafting Digital Experiences\nWith Precision & Elegance",
-  email: "hemlata.dewangan@email.com",
+  email: "Lata04951@email.com",
   phone: "+91 98765 43210",
-  location: "Indore, Madhya Pradesh, India",
-  github: "https://github.com/hemlatadewangan",
-  linkedin: "https://linkedin.com/in/hemlatadewangan",
-  twitter: "https://twitter.com/hemlatadewangan",
+  location: "Raipur Chhattisgarh India",
+  github: "https://github.com/Latadewangan",
+  linkedin: "https://linkedin.com/in/Latadewangan",
+  twitter: "https://twitter.com/Latadewangan",
   resume: "/resume.pdf",
   bio: "Passionate full-stack developer with 3+ years of experience building scalable web applications. I specialize in creating seamless digital experiences from concept to deployment.",
   yearsExperience: "3+",
@@ -55,8 +55,8 @@ export const skills = {
 
 export const techMarquee = [
   "React.js", "Next.js", "TypeScript", "Node.js", "PostgreSQL",
-  "MongoDB", "GraphQL", "Docker", "AWS", "Tailwind CSS",
-  "Express.js", "Redux", "Prisma", "Jest", "Figma",
+  "Django", "Python", "Docker",  "Tailwind CSS",
+  "Express.js", "Redux",
 ];
 
 export const projects = [

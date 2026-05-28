@@ -39,7 +39,7 @@ export default function Projects() {
           <span className="section-label">03 — Portfolio</span>
           <h2 className="mt-3 text-4xl font-light font-display md:text-5xl" style={{ color: "var(--text-primary)" }}>
             Selected{" "}
-            <span className="font-semibold text-gold-gradient">Projects</span>
+            <span className="font-gwen text-gold-gradient">Projects</span>
           </h2>
         </div>
 
@@ -144,7 +144,7 @@ export default function Projects() {
 
                 {/* Title */}
                 <h3
-                  className="mb-2 text-xl font-semibold transition-colors duration-300 font-display group-hover:text-gold-gradient"
+                  className="mb-2 text-xl transition-colors duration-300 font-gwen font-display group-hover:text-gold-gradient"
                   style={{ color: "var(--text-primary)" }}
                 >
                   {project.title}
@@ -182,7 +182,7 @@ export default function Projects() {
         {/* View more */}
         <div className={`mt-12 text-center opacity-0 delay-600 ${visible ? "animate-fade-up" : ""}`}>
           <a
-            href={`https://github.com/hemlatadewangan`}
+            href={`https://github.com/Lata2`}
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex btn-ghost"

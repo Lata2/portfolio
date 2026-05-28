@@ -32,23 +32,24 @@ export default function Navbar() {
       <header
         className="fixed top-0 left-0 right-0 z-50 transition-all duration-500"
         style={{
-          background: scrolled ? "rgba(6,6,10,0.92)" : "transparent",
+          background: scrolled ? "rgba(15, 15, 18, 0.92)" : "transparent",
           backdropFilter: scrolled ? "blur(20px)" : "none",
-          borderBottom: scrolled ? "1px solid rgba(200,169,110,0.12)" : "none",
+          borderBottom: scrolled ? "1px solid rgba(199, 182, 143, 0.12)" : "none",
+          boxShadow: scrolled ? "0 4px 30px rgba(6,6,10,0.1)" : "none",
         }}
       >
         <nav className="max-w-6xl mx-auto px-6 h-[72px] flex items-center justify-between">
           {/* Logo */}
           <a
             href="#home"
-            className="font-display text-xl font-semibold"
+            className="text-xl font-gwen font-display"
             style={{ color: "var(--gold-300)", letterSpacing: "0.5px" }}
           >
-            HD<span style={{ color: "var(--text-muted)" }}>.</span>
+            <span style={{ color: "var(--text-muted)" }}>.</span>
           </a>
 
           {/* Desktop nav */}
-          <ul className="hidden md:flex items-center gap-8">
+          <ul className="items-center hidden gap-8 md:flex">
             {navLinks.map(({ label, href }) => {
               const id = href.replace("#", "");
               const active = activeSection === id;
@@ -62,7 +63,7 @@ export default function Navbar() {
                     {label}
                     {active && (
                       <span
-                        className="absolute -bottom-1 left-0 right-0 h-px animate-scale-in"
+                        className="absolute left-0 right-0 h-px -bottom-1 animate-scale-in"
                         style={{ background: "var(--gold-400)" }}
                       />
                     )}
@@ -75,7 +76,7 @@ export default function Navbar() {
           {/* CTA */}
           <a
             href={personalInfo.resume}
-            className="hidden md:inline-flex btn-gold text-sm"
+            className="hidden text-sm md:inline-flex btn-gold"
             style={{ padding: "10px 24px" }}
           >
             Resume
@@ -83,7 +84,7 @@ export default function Navbar() {
 
           {/* Hamburger */}
           <button
-            className="md:hidden p-2 rounded-lg transition"
+            className="p-2 transition rounded-lg md:hidden"
             style={{ color: "var(--text-secondary)" }}
             onClick={() => setMenuOpen(!menuOpen)}
             aria-label="Toggle menu"
@@ -96,11 +97,11 @@ export default function Navbar() {
       {/* Mobile menu */}
       {menuOpen && (
         <div
-          className="fixed inset-0 z-40 flex flex-col justify-center items-center gap-8"
+          className="fixed inset-0 z-40 flex flex-col items-center justify-center gap-8"
           style={{ background: "rgba(6,6,10,0.97)", backdropFilter: "blur(20px)" }}
         >
           <button
-            className="absolute top-6 right-6 p-2"
+            className="absolute p-2 top-6 right-6"
             style={{ color: "var(--text-secondary)" }}
             onClick={() => setMenuOpen(false)}
           >
@@ -111,13 +112,13 @@ export default function Navbar() {
               key={label}
               href={href}
               onClick={() => setMenuOpen(false)}
-              className="font-display text-3xl font-light transition-colors duration-300 hover:text-gold-300"
+              className="text-3xl font-light transition-colors duration-300 font-display hover:text-gold-300"
               style={{ color: "var(--text-primary)" }}
             >
               {label}
             </a>
           ))}
-          <a href={personalInfo.resume} className="btn-gold mt-4">
+          <a href={personalInfo.resume} className="mt-4 btn-gold">
             Resume
           </a>
         </div>
