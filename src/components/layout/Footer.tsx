@@ -45,7 +45,7 @@ export default function Footer() {
               {[
                 { icon: Github, href: personalInfo.github, label: "GitHub" },
                 { icon: Linkedin, href: personalInfo.linkedin, label: "LinkedIn" },
-                { icon: Twitter, href: personalInfo.twitter, label: "Twitter" },
+               
                 { icon: Mail, href: `mailto:${personalInfo.email}`, label: "Email" },
               ].map(({ icon: Icon, href, label }) => (
                 <a

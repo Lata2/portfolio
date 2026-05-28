@@ -4,18 +4,14 @@ export const personalInfo = {
   lastName: "Dewangan",
   title: "Full Stack Web Developer",
   tagline: "Crafting Digital Experiences\nWith Precision & Elegance",
-  email: "Lata04951@email.com",
-  phone: "+91 98765 43210",
+  email: "lata04951@gmail.com",
+  phone: "+91 8827563077",
   location: "Raipur Chhattisgarh India",
-  github: "https://github.com/Latadewangan",
-  linkedin: "https://linkedin.com/in/Latadewangan",
-  twitter: "https://twitter.com/Latadewangan",
-  resume: "/resume.pdf",
-  bio: "Passionate full-stack developer with 3+ years of experience building scalable web applications. I specialize in creating seamless digital experiences from concept to deployment.",
-  yearsExperience: "3+",
-  projectsCompleted: "50+",
-  happyClients: "30+",
-  techStack: "20+",
+  github: "https://github.com/Lata2",
+  linkedin: "https://www.linkedin.com/in/lata-dewangan",
+resume: "/lataD_resume.pdf",
+  bio: "Passionate full-stack developer with 2 years of experience building scalable web applications. I specialize in creating seamless digital experiences from concept to deployment.",
+
 };
 
 export const roles = [
@@ -58,15 +54,17 @@ export const techMarquee = [
   "Django", "Python", "Docker",  "Tailwind CSS",
   "Express.js", "Redux",
 ];
-
 export const projects = [
   {
     id: 1,
-    title: "ShopSphere",
+    title: "Funday TV",
     category: "Full Stack",
-    description: "A full-featured e-commerce platform with real-time inventory management, payment integration, and an admin dashboard.",
-    longDescription: "Built with Next.js 14, TypeScript, PostgreSQL, and Stripe integration. Features include product search, filtering, cart management, and order tracking.",
-    tags: ["Next.js", "TypeScript", "PostgreSQL", "Stripe", "Tailwind"],
+    description:
+      "A full-featured e-commerce platform with real-time inventory management, payment integration, and an admin dashboard.",
+    longDescription:
+      "Built with Next.js 14, TypeScript, PostgreSQL, and Stripe integration. Features include product search, filtering, cart management, and order tracking.",
+    tags: ["Next.js", "TypeScript", "PostgreSQL", "Tailwind"],
+    related: ["OTT Platform", "Streaming App", "Entertainment App"],
     github: "#",
     live: "#",
     featured: true,
@@ -74,11 +72,14 @@ export const projects = [
   },
   {
     id: 2,
-    title: "TaskFlow Pro",
+    title: "Court Case Monitoring System",
     category: "Full Stack",
-    description: "A collaborative project management tool with real-time updates, drag-and-drop kanban boards, and team collaboration features.",
-    longDescription: "Developed using React, Node.js, Socket.io, and MongoDB. Supports real-time collaboration, file uploads, and deadline tracking.",
-    tags: ["React", "Node.js", "Socket.io", "MongoDB", "Redux"],
+    description:
+      "A collaborative project management tool with real-time updates, drag-and-drop kanban boards, and team collaboration features.",
+    longDescription:
+      "Developed using React, Node.js, Socket.io, and MongoDB. Supports real-time collaboration, file uploads, and deadline tracking.",
+    tags: ["Angular", "Node.js", "PostgreSQL"],
+    related: ["Legal Tech", "Case Tracking", "Monitoring System"],
     github: "#",
     live: "#",
     featured: true,
@@ -86,63 +87,38 @@ export const projects = [
   },
   {
     id: 3,
-    title: "DevBlog CMS",
+    title: "Billzap Billing System",
     category: "Frontend",
-    description: "A headless CMS-powered developer blog with MDX support, syntax highlighting, and SEO optimization.",
-    longDescription: "Built with Next.js, MDX, and a custom CMS. Features dark/light mode, reading progress, and newsletter subscription.",
-    tags: ["Next.js", "MDX", "Contentful", "GraphQL"],
+    description:
+      "A headless CMS-powered developer blog with MDX support, syntax highlighting, and SEO optimization.",
+    longDescription:
+      "Built with Next.js, MDX, and a custom CMS. Features dark/light mode, reading progress, and newsletter subscription.",
+    tags: ["React","Django","Tailwind","Redux","PostgreSQL"],
+    related: ["Billing App", "Invoice System", "Finance Dashboard"],
     github: "#",
     live: "#",
     featured: false,
     year: "2023",
-  },
-  {
-    id: 4,
-    title: "FinTrack API",
-    category: "Backend",
-    description: "A RESTful API for personal finance tracking with expense categories, budgeting, and analytics endpoints.",
-    longDescription: "Node.js/Express API with PostgreSQL database, JWT auth, Redis caching, and comprehensive Swagger documentation.",
-    tags: ["Node.js", "Express", "PostgreSQL", "Redis", "Swagger"],
-    github: "#",
-    live: "#",
-    featured: false,
-    year: "2023",
-  },
-  {
-    id: 5,
-    title: "WeatherVue",
-    category: "Frontend",
-    description: "A beautiful weather dashboard with animated visualizations, 7-day forecasts, and location-based data.",
-    longDescription: "React app using OpenWeatherMap API with interactive charts, geolocation support, and PWA capabilities.",
-    tags: ["React", "Chart.js", "OpenWeatherMap", "PWA"],
-    github: "#",
-    live: "#",
-    featured: false,
-    year: "2022",
-  },
-  {
-    id: 6,
-    title: "AuthGuard",
-    category: "Library",
-    description: "A reusable authentication library with JWT, OAuth2, 2FA support, and role-based access control.",
-    longDescription: "Open-source npm package with comprehensive documentation, supporting multiple auth strategies and session management.",
-    tags: ["Node.js", "JWT", "OAuth2", "npm"],
-    github: "#",
-    live: "#",
-    featured: false,
-    year: "2022",
   },
 ];
-
 export const experiences = [
   {
     id: 1,
     role: "Full Stack Developer",
-    company: "TechNova Solutions",
-    location: "Indore, India",
-    period: "Jan 2023 – Present",
+    company: "Blazeads",
+    location: "Raipur CG India",
+    period: "May 2026 – Present",
     type: "Full-time",
-    description: "Lead developer for client-facing web applications. Built and maintained 10+ production apps using React, Next.js, and Node.js. Reduced page load time by 40% through performance optimizations.",
+    related: [
+      "OTT Platform",
+      "Streaming Application",
+      "Next.js",
+      "Node.js",
+      "Video Streaming",
+      "Full Stack Development"
+    ],
+    description:
+      "OTT application development and maintenance. Collaborate with cross-functional teams to design and implement new features, optimize performance, and ensure a seamless user experience.",
     highlights: [
       "Architected a microservices backend serving 100k+ daily requests",
       "Mentored 3 junior developers and conducted weekly code reviews",
@@ -152,12 +128,21 @@ export const experiences = [
   },
   {
     id: 2,
-    role: "Frontend Developer Intern",
-    company: "Pixel Craft Agency",
-    location: "Bhopal, India",
-    period: "Jun 2022 – Dec 2022",
+    role: "Full Stack Developer Intern",
+    company: "National Informatics Centre (NIC)",
+    location: "Raipur CG India",
+    period: "Jan 2025 – July 2025",
     type: "Internship",
-    description: "Developed responsive UI components and interactive dashboards. Collaborated with design team to implement pixel-perfect interfaces.",
+    related: [
+      "Government Projects",
+      "Court Case Monitoring System",
+      "Angular",
+      "Node.js",
+      "MySQL",
+      "e-Governance"
+    ],
+    description:
+      "Developed and maintained web applications for government services, collaborating with cross-functional teams to enhance user experience and optimize performance.",
     highlights: [
       "Built a 20+ component React library used across multiple projects",
       "Improved mobile performance scores from 60 to 92 (Lighthouse)",
@@ -166,20 +151,51 @@ export const experiences = [
   },
   {
     id: 3,
-    role: "Freelance Web Developer",
-    company: "Self-Employed",
-    location: "Remote",
-    period: "2021 – 2022",
-    type: "Freelance",
-    description: "Delivered custom web solutions for 15+ clients across diverse industries including retail, education, and healthcare.",
+    role: "Frontend Developer",
+    company: "Yashvitech IT Solutions",
+    location: "Raipur CG India",
+    period: "June 2024 – Dec 2024",
+    type: "Full-time",
+    related: [
+      "Billzap Billing System",
+      "Frontend Development",
+      "React",
+      "JavaScript",
+      "Responsive Design",
+      "UI/UX"
+    ],
+    description:
+      "Billing system development and maintenance. Collaborate with cross-functional teams to design and implement new features, optimize performance, and ensure a seamless user experience.",
     highlights: [
       "Built 15+ client websites from scoping to production deployment",
       "Managed full project lifecycle independently",
       "Maintained consistent 5-star client satisfaction rating",
     ],
   },
+  {
+    id: 4,
+    role: "Full Stack Developer Intern",
+    company: "Yashvitech IT Solutions",
+    location: "Raipur CG India",
+    period: "Nov 2023 – May 2024",
+    type: "Internship",
+    related: [
+      "Web Development",
+      "Client Projects",
+      "MERN Stack",
+      "Full Stack Development",
+      "Business Applications",
+      "Custom Solutions"
+    ],
+    description:
+      "Delivered custom web solutions for  clients across diverse industries including retail, education, and healthcare.",
+    highlights: [
+      "Built client's websites from scoping to production deployment",
+      "Managed full project lifecycle independently",
+      "Maintained consistent 5-star client satisfaction rating",
+    ],
+  },
 ];
-
 export const navLinks = [
   { label: "About", href: "#about" },
   { label: "Skills", href: "#skills" },

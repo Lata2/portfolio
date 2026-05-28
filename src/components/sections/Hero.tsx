@@ -40,11 +40,7 @@ export default function Hero() {
     return () => clearTimeout(timer);
   }, []);
 
-  const stats = [
-    { value: personalInfo.yearsExperience, label: "Years Experience" },
-    { value: personalInfo.projectsCompleted, label: "Projects Completed" },
-    { value: personalInfo.happyClients, label: "Happy Clients" },
-  ];
+ 
 
   return (
     <section
@@ -268,23 +264,7 @@ export default function Hero() {
           </div>
         </div>
 
-        {/* Stats */}
-        <div
-          className={`mt-20 grid grid-cols-3 gap-6 max-w-lg opacity-0 delay-600 ${visible ? "animate-fade-up" : ""}`}
-        >
-          {stats.map(({ value, label }) => (
-            <div key={label} className="text-center">
-              <p
-                className="text-3xl font-gwen font-display text-gold-gradient"
-              >
-                {value}
-              </p>
-              <p className="mt-1 text-xs" style={{ color: "var(--text-muted)" }}>
-                {label}
-              </p>
-            </div>
-          ))}
-        </div>
+    
       </div>
 
       {/* Scroll indicator */}
